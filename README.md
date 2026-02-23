@@ -103,5 +103,3 @@ See: `docs/OUTPUTS.md`
 
 ---
 
-## License
-MIT — see `LICENSE`.
