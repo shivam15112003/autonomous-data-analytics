@@ -85,7 +85,7 @@ See: `docs/OUTPUTS.md`
 
 ```
 .
-├── ops_pipeline_auto.py              # (you add this)
+├── ops_pipeline_auto.py              
 ├── requirements.txt
 ├── requirements-optional.txt
 ├── gemini_api_key.txt.example
