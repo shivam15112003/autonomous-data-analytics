@@ -1,0 +1,48 @@
+# API keys and credentials — never commit these
+gemini_api_key.txt
+.env
+.env.*
+*.key
+*.pem
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local run outputs (large/generated; curated demo copies live in sample/)
+outputs/
+tmp/
+temp/
+
+# Browser automation profiles and session data
+chrome-profile/
+browser-profile/
+*profile/DEFAULT/
+*.sqlite
+
+# LaTeX build artifacts (keep committed .tex, ignore build byproducts)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Exception: curated demo log is intentionally committed
+!sample/sample_outputs/pipeline.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

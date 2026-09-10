@@ -1,19 +1,17 @@
-# Heavy/optional dependencies used by advanced analysis paths
-scikit-learn
-statsmodels
-joblib
-optuna
+# Full-feature dependencies (guarded imports — pipeline runs without them)
+scikit-learn   # clustering, anomaly detection, supervised modeling
+joblib         # persisting supervised pipelines
 
-# Optional ML libraries
-xgboost
-lightgbm
-catboost
-
-# Time series / change point / embedding / anomaly toolkits (optional)
-prophet
-ruptures
-umap-learn
-pyod
-
-# Gemini browser mode
+# Gemini browser mode (experimental)
 selenium
+
+# --- Future extension candidates (not required, not imported by current code) ---
+# statsmodels
+# optuna
+# xgboost
+# lightgbm
+# catboost
+# prophet
+# ruptures
+# umap-learn
+# pyod

@@ -1,0 +1,20 @@
+{
+  "source": "offline-template",
+  "sections": {
+    "key_findings": [
+      "Strongest linear association is temperature_rollmean3 vs temperature_lag1 (|r|=0.863).",
+      "Anomaly screening flagged 10 rows (5.0%) via IsolationForest.",
+      "Naive backtest on 'temperature': RMSE=2.2605, MAE=1.9407.",
+      "Supervised classification accuracy=1.0, F1-macro=1.0."
+    ],
+    "recommendations": [
+      "Validate top associations with domain context before acting.",
+      "Review flagged anomalies for data-quality vs operational causes.",
+      "Promote the saved pipeline only after holdout validation."
+    ],
+    "limitations": [
+      "LLM narrative is evidence-grounded but not a substitute for domain review."
+    ],
+    "executive_summary": "Automated analysis of 200 rows x 6 columns produced 4 key finding(s). Strongest linear association is temperature_rollmean3 vs temperature_lag1 (|r|=0.863)."
+  }
+}

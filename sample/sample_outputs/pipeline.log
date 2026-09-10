@@ -1,0 +1,4 @@
+2026-09-10 12:13:25,076 INFO Run sample_run starting (mode=off).
+2026-09-10 12:13:26,597 WARNING Plan: Offline mode: deterministic default plan.
+2026-09-10 12:13:26,624 INFO Cleaning: ['dropped 0 duplicate rows', 'median/mode imputed missing values']; engineered: ['hour', 'dayofweek', 'month', 'temperature_lag1', 'pressure_lag1', 'vibration_lag1', 'temperature_rollmean3', 'pressure_rollmean3', 'vibration_rollmean3']
+2026-09-10 12:13:33,726 INFO Run sample_run complete. PDF=True

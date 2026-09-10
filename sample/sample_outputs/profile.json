@@ -1,0 +1,106 @@
+{
+  "shape": [
+    200,
+    6
+  ],
+  "columns": [
+    {
+      "name": "timestamp",
+      "dtype": "str",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "n_unique": 200
+    },
+    {
+      "name": "temperature",
+      "dtype": "float64",
+      "missing": 1,
+      "missing_pct": 0.5,
+      "n_unique": 171
+    },
+    {
+      "name": "pressure",
+      "dtype": "float64",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "n_unique": 149
+    },
+    {
+      "name": "vibration",
+      "dtype": "float64",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "n_unique": 176
+    },
+    {
+      "name": "status",
+      "dtype": "str",
+      "missing": 1,
+      "missing_pct": 0.5,
+      "n_unique": 2
+    },
+    {
+      "name": "fault",
+      "dtype": "int64",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "n_unique": 1
+    }
+  ],
+  "numeric_summary": {
+    "temperature": {
+      "count": 199.0,
+      "mean": 21.956934673366835,
+      "std": 1.5764274117763135,
+      "min": 17.74,
+      "25%": 20.93,
+      "50%": 21.78,
+      "75%": 22.93,
+      "max": 26.28
+    },
+    "pressure": {
+      "count": 200.0,
+      "mean": 100.60205,
+      "std": 0.9363530759892731,
+      "min": 97.68,
+      "25%": 99.975,
+      "50%": 100.57,
+      "75%": 101.2325,
+      "max": 102.97
+    },
+    "vibration": {
+      "count": 200.0,
+      "mean": 0.43564,
+      "std": 0.30922121401349534,
+      "min": -0.012,
+      "25%": 0.1845,
+      "50%": 0.3615,
+      "75%": 0.61975,
+      "max": 1.494
+    },
+    "fault": {
+      "count": 200.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 0.0
+    }
+  },
+  "timestamp_column": "timestamp",
+  "timestamp_range": [
+    "2024-01-01 00:00:00",
+    "2024-01-09 07:00:00"
+  ],
+  "candidate_id_columns": [
+    "timestamp"
+  ],
+  "is_time_series": true,
+  "n_numeric": 4,
+  "n_categorical": 2,
+  "ingestion": {
+    "big_mode": false
+  }
+}

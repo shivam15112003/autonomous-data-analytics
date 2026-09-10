@@ -1,0 +1,33 @@
+{
+  "source": "offline",
+  "warnings": [
+    "Offline mode: deterministic default plan."
+  ],
+  "plan": {
+    "cleaning": [
+      "drop_duplicates",
+      "median_mode_fill"
+    ],
+    "missing_strategy": "median_mode",
+    "resampling": "time_grid_mean",
+    "resample_rule": "1h",
+    "feature_engineering": [
+      "time_features",
+      "lags",
+      "rolling_stats"
+    ],
+    "analyses": [
+      "correlation",
+      "anomaly_detection",
+      "forecasting"
+    ],
+    "supervised": "random_forest_classifier",
+    "supervised_target": "fault",
+    "visualizations": [
+      "histograms",
+      "time_series",
+      "forecast_plot"
+    ],
+    "notes": "Conservative offline default plan."
+  }
+}

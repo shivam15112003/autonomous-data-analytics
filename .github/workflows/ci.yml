@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+          pip install scikit-learn joblib pytest
+      - name: Syntax check
+        run: python -m py_compile ops_pipeline_auto.py
+      - name: Run tests
+        run: python -m pytest tests/ -q
+      - name: Offline smoke run
+        run: |
+          python -c "import pandas as pd, numpy as np; rng=np.random.default_rng(0); n=120; df=pd.DataFrame({'timestamp': pd.date_range('2024-01-01', periods=n, freq='h'), 'temperature': 20+rng.normal(0,1,n), 'pressure': 100+rng.normal(0,0.5,n)}); df.to_csv('ci_demo.csv', index=False)"
+          python ops_pipeline_auto.py ci_demo.csv --out ci_outputs --gemini-mode off --run-id ci_smoke --no-plots
+          test -f ci_outputs/ci_smoke/manifest.json
+          test -f ci_outputs/ci_smoke/reports/ci_smoke_report.tex
